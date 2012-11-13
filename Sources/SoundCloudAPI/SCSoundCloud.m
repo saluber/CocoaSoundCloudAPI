@@ -57,6 +57,11 @@ NSString * const SCSoundCloudDidFailToRequestAccessNotification = @"SCSoundCloud
     [SCSoundCloud shared];
 }
 
+// Added as a test hook for forced login to app without login screen
++ (void) requestTestAccess:(NSString *)username password:(NSString *)password {
+    [[self shared] requestAccessWithUsername:username password:password];
+}
+
 - (id)init;
 {
     self = [super init];

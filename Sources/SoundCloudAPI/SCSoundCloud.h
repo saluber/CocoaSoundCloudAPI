@@ -44,6 +44,9 @@ typedef void(^SCPreparedAuthorizationURLHandler)(NSURL *preparedURL);
 
 #pragma mark Manage Accounts
 
+// Added as a test hook for forced login to app without login screen
++ (void) requestTestAccess:(NSString *)username password:(NSString *)password;
+
 + (void)requestAccessWithPreparedAuthorizationURLHandler:(SCPreparedAuthorizationURLHandler)aPreparedAuthorizationURLHandler;
 + (void)removeAccess;
 
